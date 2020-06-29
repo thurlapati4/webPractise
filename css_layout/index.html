@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>d block elements</title>
+</head>
+<!---we define style here-->
+<style>
+h1{background-color:AliceBlue;}
+h2{background-color:Bisque;}
+h1, h2{padding:10px;}
+.par{color:red;}
+.drpdwn{color:red; background-color:yellow; font-size:30px;}
+.hdng{ display:none;position: relative; padding:15px; top:10px; width:12%; font-size:35px; color:cyan; background-color:green; text-align:center;}
+.img1{ padding:20px; float:right; background-color: inherit;}
+.bd{ padding:20px; background-color: inherit; font-size:25px; text-align:justify; }
+.mat{background-color:cyan; color:blue; font-size:30px; display:none;}
+</style>
+<!--we provide javascript here-->
+<script src="matter.js"></script>
+<script>
+
+function js1()
+{
+   var g = document.getElementById("drpdwn1");
+   var g1 = document.getElementById("hdng1");
+   var g2 = document.getElementById("img11");
+   var g3 = document.getElementById("bd1");
+   var g4 = document.getElementById("mat1");
+   g1.style.display="block";
+   g4.style.display="block";
+   if(g.value!="0")
+   g1.innerHTML=g.value;
+   if(g.value=="0")
+	{g1.style.display="none";
+   g4.style.display="none";}
+   if(g.value=="Scandium")
+	{g2.src="Scandium.jpg"; g3.innerHTML=str1; }
+	else if(g.value=="Titanium")
+		{g2.src="Titanium.jpg"; g3.innerHTML=str2;}
+		else if(g.value=="Vanadium")
+			{g2.src="Vanadium.jpg"; g3.innerHTML=str3;}
+			else if(g.value=="Chromium")
+				{g2.src="Chromium.jpg"; g3.innerHTML=str4;}
+				else if(g.value=="Manganese")
+					{g2.src="Manganese.jpg"; g3.innerHTML=str5;}
+					else if(g.value=="Iron")
+						{g2.src="Iron.jpg"; g3.innerHTML=str6;}
+						else if(g.value=="Cobalt")
+							{g2.src="Cobalt.jpg"; g3.innerHTML=str7;}
+							else if(g.value=="Nickel")
+								{g2.src="Nickel.jpg"; g3.innerHTML=str8;}
+								else if(g.value=="Copper")
+									{g2.src="Copper.jpg"; g3.innerHTML=str9;}
+									else if(g.value=="Zinc")
+										{g2.src="Zinc.jpg"; g3.innerHTML=str10;}
+}
+</script>
+<!--this is actual section where content is defined-->
+<body style="background-color:slateblue">
+<h1>d-block elements</h1>
+<h2>This page is mainly indented to provide information about  main d-block elements in periodic table</h2>
+<h2>Select any 3d orbital element to get information</h2>
+<div>
+<select class="drpdwn" id="drpdwn1" name="drp1" onchange="js1()">
+<option value="0">--select--</option>
+<option value="Scandium">Scandium</option>
+<option value="Titanium">Titanium</option>
+<option value="Vanadium">Vanadium</option>
+<option value="Chromium">Chromium</option>
+<option value="Manganese">Manganese</option>
+<option value="Iron">Iron</option>
+<option value="Cobalt">Cobalt</option>
+<option value="Nickel">Nickel</option>
+<option value="Copper">Copper</option>
+<option value="Zinc">Zinc</option>
+</select>
+</div>
+<div class="hdng" id="hdng1">
+</div>
+<!--this section took considerable amount of time-->
+<div class="mat" id="mat1">
+<img class="img1" id="img11" src="" width=500px height=500px>
+<p class="par">Content about the given element</p>
+<div class="bd" id="bd1">
+</div>
+</div>
+
+</body>
+</html>
